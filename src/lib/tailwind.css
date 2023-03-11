@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "hiBlack";
+    src: url("/fonts/hi-black.otf");
+}
+
+@font-face {
+    font-family: "arrow";
+    src: url("/fonts/arrow.ttf");
+}
+
+@layer base {
+    a,
+    button {
+        @apply select-none;
+    }
+}
+
+@layer components {
+    .polka-background {
+        background-image: radial-gradient(circle at center center, #0f0f0f 9%, #050505 9%);
+        background-size: 15px 15px;
+        background-position: center;
+    }
+
+    /* buttons */
+    .btn-primary {
+        @apply w-full rounded-lg py-2 px-4 outline-none bg-backgroundSecondary text-white text-lg border border-blue-700;
+    }
+
+    .btn-secondary {
+        @apply flex items-center justify-center bg-blue-900 py-2 px-4 rounded-lg gap-2 outline-none text-white;
+    }
+
+    /* inputs */
+    .input-primary {
+        @apply flex flex-col gap-1 justify-center items-start;
+    }
+
+    .input-primary div {
+        @apply w-full flex justify-between px-4;
+    }
+
+    .input-primary p {
+        @apply px-4 text-sm text-light;
+    }
+
+    .input-primary div p {
+        @apply px-0;
+    }
+
+    .input-primary div .success-text {
+        @apply text-emerald-500;
+    }
+
+    .input-primary div .error-text {
+        @apply text-red-500;
+    }
+
+    .input-primary input {
+        @apply w-full rounded-lg py-2 px-4 outline-none bg-backgroundSecondary text-white border border-blue-700 placeholder:text-extraLight;
+    }
+}
