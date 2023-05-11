@@ -1,13 +1,13 @@
 <script lang="ts">
     export let data: any;
 
-    import PlayerNav from "$lib/game/components/player/nav.svelte";
-    import HostNav from "$lib/game/components/host/nav.svelte";
+    import PlayerNav from "$lib/components/player/nav.svelte";
+    import HostNav from "$lib/components/host/nav.svelte";
 
     import { onMount } from "svelte";
     import { goto } from "$app/navigation";
     import socketConnection from "$lib/socket-connection";
-    import { updateValue } from "$lib/game/scripts/shared/data";
+    import { updateValue } from "$lib/scripts/shared/data";
     let gameComponents: any;
 
     onMount(() => {
@@ -20,11 +20,11 @@
             updateValue("socket", socketConnection);
 
             if (data.lobbyHost === true) {
-                gameComponents = (await import("$lib/game/components/host/main.svelte")).default;
-                (await import("$lib/game/scripts/host/main")).default();
+                gameComponents = (await import("$lib/components/host/main.svelte")).default;
+                (await import("$lib/scripts/host/main")).default();
             } else {
-                gameComponents = (await import("$lib/game/components/player/main.svelte")).default;
-                (await import("$lib/game/scripts/player/main")).default();
+                gameComponents = (await import("$lib/components/player/main.svelte")).default;
+                (await import("$lib/scripts/player/main")).default();
             }
         });
     });
