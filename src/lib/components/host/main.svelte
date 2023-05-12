@@ -3,6 +3,7 @@
     import GameIntro from "./gameIntro.svelte";
     import Overview from "./overview.svelte";
     import PresentPlayerRoles from "./presentPlayerRoles.svelte";
+    import Objectives from "./objectives.svelte";
     import { gameState, gameScreen } from "$lib/scripts/shared/data";
 </script>
 
@@ -15,10 +16,12 @@
 {/if}
 
 {#if $gameState === "presentPlayerRoles"}
-    <PresentPlayerRoles></PresentPlayerRoles>
+    <PresentPlayerRoles />
 {/if}
 
 {#if $gameState === "game"}
+    <Objectives />
+
     {#if $gameScreen === "home"}
         <Overview />
     {/if}

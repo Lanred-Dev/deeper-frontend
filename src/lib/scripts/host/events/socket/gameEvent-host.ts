@@ -1,6 +1,7 @@
 import playerJoin from "$lib/scripts/host/events/game/playerJoin";
 import playerLeave from "$lib/scripts/host/events/game/playerLeave";
 import presentPlayerRoles from "$lib/scripts/host/events/game/presentPlayerRoles";
+import updateObjectives from "$lib/scripts/host/events/game/updateObjectives";
 import { info } from "@lanred/basic-logger";
 
 export default function gameEventHost(event: string, ...eventData: any) {
@@ -11,7 +12,9 @@ export default function gameEventHost(event: string, ...eventData: any) {
             return playerJoin(...(eventData as [any, number]));
         case "playerLeave":
             return playerLeave(...(eventData as [string, number]));
-            case "presentPlayerRoles":
+        case "presentPlayerRoles":
             return presentPlayerRoles();
+        case "updateObjectives":
+            return updateObjectives(...(eventData as [{ [key: string]: string }]));
     }
 }

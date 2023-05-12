@@ -8,3 +8,5 @@ export const playersRaw: Array<player | boolean> = [];
 export const playersWriteable: Writable<Array<player | boolean>> = writable([]);
 
 export const gameStartTime: Writable<Date> = writable();
+
+export const objectives: Writable<any> = writable({});

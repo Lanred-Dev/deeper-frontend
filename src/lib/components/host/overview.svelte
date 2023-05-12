@@ -3,23 +3,6 @@
 </script>
 
 <div class="polka-background w-screen h-screen absolute left-0 top-0 flex items-center justify-center">
-    <div class="flex flex-col gap-2 items-start text-left absolute left-[5%] top-[25%]">
-        <div class="mb-4">
-            <p class="text-white text-4xl mb-1">objectives</p>
-            <p class="text-light text-lg">new objective</p>
-        </div>
-
-        <p class="text-light text-base flex justify-start items-center">
-            <span class="w-3 aspect-square bg-blue-700 inline-block mr-2 rounded-full" />
-            explore the room
-        </p>
-
-        <p class="text-light text-base flex justify-start items-center brightness-[0.45] grayscale-[100%] line-through">
-            <span class="w-3 aspect-square bg-blue-700 inline-block mr-2 rounded-full" />
-            explore the room
-        </p>
-    </div>
-
     <div class="h-[50vh] aspect-[1.5/1] border-[2.5px] border-gray-700 rounded-md relative overflow-hidden bg-background">
         <div class="w-[50%] h-[55%] absolute top-1/2 -translate-y-1/2 left-[10%] flex flex-col items-start z-[2]">
             <div class="flex gap-[0.1rem] justify-start h-3 mb-6">

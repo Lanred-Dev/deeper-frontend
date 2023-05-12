@@ -1,6 +1,6 @@
 <script lang="ts">
     import { secondsToMinutes } from "date-fns";
-    import { gameData, gameState, socket } from "$lib/scripts/shared/data";
+    import { gameData, gameState } from "$lib/scripts/shared/data";
     //1800 is 30 minutes in seconds
     let timeLeft: number = 1800;
 
